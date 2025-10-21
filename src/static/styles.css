@@ -142,3 +142,71 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+.participants {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #e0e0e0;
+}
+
+.participants h5 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.participants ul {
+  list-style: none; /* hide bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.participants li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  font-size: 14px;
+  color: #444;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+/* Delete button next to each participant */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background 0.12s ease-in-out;
+}
+.delete-btn:hover {
+  background: rgba(198, 40, 40, 0.08);
+}
+.delete-btn:focus {
+  outline: 2px solid rgba(26,35,126,0.15);
+}
+
+/* Subtle styling for empty state */
+.no-participants {
+  color: #777;
+  font-style: italic;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+/* Make sure activity card doesn't become too tall on small screens */
+@media (max-width: 480px) {
+  .participants h5 {
+    font-size: 13px;
+  }
+  .participants li, .no-participants {
+    font-size: 13px;
+  }
+}
